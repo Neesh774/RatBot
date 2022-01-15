@@ -28,7 +28,7 @@ public class RobotContainer {
 
   //joysticks we are going to use
   private final Joystick m_joystick1 = new Joystick(0);
-  private final Joystick m_joystick2 = new Joystick(2);
+  private final Joystick m_joystick2 = new Joystick(1);
 
   /** The container for the robot. Contains subsystems, OI devices, and commands. */
   public RobotContainer() {
