@@ -14,14 +14,14 @@ public class TankDrive extends CommandBase {
      * takes in left and right control inputs for each motor
      * drivetrain is the subsystem to drive
      */
-    
+
     public TankDrive(DoubleSupplier left, DoubleSupplier right, DriveTrain drivetrain) {
-        //setting parameters to local vars
-    `   _drivetrain = divetrain;
+        // setting parameters to local vars
+        m_drivetrain = drivetrain;
         m_left = left;
         m_right = right;
 
-        //not quite sure what this does tbh
+        // not quite sure what this does tbh
         addRequirements(m_drivetrain);
     }
 
@@ -31,11 +31,12 @@ public class TankDrive extends CommandBase {
         m_drivetrain.drive(m_left.getAsDouble(), m_right.getAsDouble());
     }
 
-  // Make this return true when this Command no longer needs to run execute()
+    // Make this return true when this Command no longer needs to run execute()
     @Override
     public boolean isFinished() {
         return false; // Runs until interrupted
     }
+
     // Called once after isFinished returns true
     @Override
     public void end(boolean interrupted) {
